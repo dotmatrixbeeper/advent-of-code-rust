@@ -1,3 +1,11 @@
+/// ### Solution for Part 1
+/// 
+/// 
+/// #### Rust Implementation Details
+/// We create an iterator over the characters of the input string. 
+/// We map each character and match against `(` to return 1 and -1 otherwise. 
+/// Then we use the collecting function `sum` to add all the map returned 1s and -1s to arrive at the answer.
+
 use std::cmp::min;
 
 use crate::Dimensions;
