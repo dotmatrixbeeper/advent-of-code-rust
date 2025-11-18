@@ -1,3 +1,10 @@
+/// ### Solution for Part 2
+/// This is the same as the previous problem, just with 50 passes
+/// instead of 40.
+/// 
+/// #### Rust Implementation Details
+/// Implementation remains thesame except the loop runs from 0 to 49
+
 pub fn solve() {
     let input = "3113322113".chars().collect::<Vec<char>>();
     let mut solution = look_and_say(&input);
@@ -29,8 +36,6 @@ fn look_and_say(input: &Vec<char>) -> Vec<char> {
 
     solution_vec.push(char::from_digit(count, 10).unwrap());
     solution_vec.push(*input.last().unwrap());
-
-    // solution_vec.reverse();
-
+    
     solution_vec
 }

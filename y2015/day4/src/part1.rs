@@ -1,8 +1,18 @@
+/// ### Solution for Part 1
+/// This problem requires you to start from a given string, appended with a 
+/// number that increments until we find the hash that starts with five zeros (00000)
+/// 
+/// #### Rust Implementation Details
+/// We take groups of 200,000 starting from 1 and spread the processing across
+/// five threads that simultaneously try to find the required hash. 
+/// Once joined the handles contain Option<u32>
+/// We can then filter through the handles and find the minimum suffix
+
 use std::sync::Arc;
 use std::thread;
 use std::thread::JoinHandle;
 
-use crate::RANGE;
+pub const RANGE: [(u32, u32); 5] = [(1, 200_000), (200_001, 400_000), (400_001, 600_000), (600_001, 800_000), (800_001, 1_000_000)];
 
 pub fn solve(seed: &str) {
     let arc_seed = Arc::new(seed.to_string());

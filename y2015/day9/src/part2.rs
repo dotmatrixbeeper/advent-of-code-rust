@@ -1,3 +1,10 @@
+/// ### Solution for Part 2
+/// This follows the same premise as part 1, but the solution now
+/// requries us to find the longest route. 
+/// 
+/// #### Rust Implementation Details
+/// We change the comparision functions for min_cost to max_cost.
+
 use std::collections::HashMap;
 
 use crate::{Graph, NodeId, Subset, Distance};

@@ -1,8 +1,19 @@
+/// ### Solution for Part 2
+/// This is more of the same problem, only this time we need to match against six zeros 
+/// instead of the five zeros from the first part of the problem. However we do need to 
+/// expand the range of numbers to search through.
+/// 
+/// #### Rust Implementation Details
+/// We take groups of 2_000,000 starting from 1 and spread the processing across
+/// five threads that simultaneously try to find the required hash. 
+/// Once joined the handles contain Option<u32>
+/// We can then filter through the handles and find the minimum suffix
+
 use std::sync::Arc;
 use std::thread;
 use std::thread::JoinHandle;
 
-use crate::RANGE;
+pub const RANGE: [(u32, u32); 5] = [(1, 2_000_000), (2_000_001, 4_000_000), (4_000_001, 6_000_000), (6_000_001, 8_000_000), (8_000_001, 10_000_000)];
 
 pub fn solve(seed: &str) {
     let arc_seed = Arc::new(seed.to_string());

@@ -1,3 +1,20 @@
+/// ### Solution for Part 1
+/// This is a classic travelling salesperson problem. We need to
+/// find the shortest path, without repetation, given the distances
+/// between each city. 
+/// We solve this by using the Held-Karp algorithm, with dynamic 
+/// programming.  
+/// 
+/// #### Rust Implementation Details
+/// We use dp to keep track of the minimum cost to visit the nodes 
+/// in a subset.
+/// parent keeps track of the previous node from which a subset of 
+/// nodes are visited while having the lowest cost
+/// We start with each individual node, and its distances from itself
+/// as 0.
+/// After finding the best path, we can retrace the path using the 
+/// parent map.
+
 use std::collections::HashMap;
 
 use crate::{Graph, NodeId, Subset, Distance};

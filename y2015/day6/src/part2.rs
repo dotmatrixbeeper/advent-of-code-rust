@@ -1,3 +1,15 @@
+/// ### Solution for Part 2
+/// The second part re-writes the rules a bit and turns each grid 
+/// point into a continuous value instead of boolean on and off.
+/// This follows the previous implementation with a few changes.
+/// 
+///  
+/// #### Rust Implementation Details
+/// We change the previous implementation to have the vector 
+/// contain i16 instead of boolean.
+/// On each iteration now we increment or decrement the value
+/// in the grid point as required
+
 use crate::Instruction;
 
 pub fn solve(data: &Vec<Instruction>) {

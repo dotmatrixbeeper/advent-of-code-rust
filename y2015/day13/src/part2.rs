@@ -1,3 +1,11 @@
+/// ### Solution for Part 2
+/// The second part needs us to add one more node to the problem, with 
+/// zero costs for any relationship to any other.
+/// 
+/// #### Rust Implementation Details
+/// We keep the same solution while adding one more node to the graph 
+/// and vertex_map
+
 use std::{collections::HashMap, i32};
 
 use crate::Graph;
@@ -31,7 +39,6 @@ pub fn solve(graph: &mut Graph, vertex_map: &mut HashMap<usize, String>) {
                     let prev_subset = remove_from_subset(subset, last);
                     if let Some(&prev_cost) = dp.get(&(prev_subset, prev)) {
                         let cost = prev_cost.saturating_add(graph.distance(prev, last)).saturating_add(graph.distance(last, prev));
-                        // println!("cost: {cost}");
                         if cost > max_cost {
                             max_cost = cost;
                             best_prev = prev;

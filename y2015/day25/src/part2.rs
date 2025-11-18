@@ -1,1 +1,1 @@
-// Got the machine to start. Merry Christmas :)
+// Machine has started. Merry Christmas :)

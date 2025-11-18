@@ -1,3 +1,19 @@
+/// ### Solution for Part 1
+/// In a 1000x1000 grid we need to keep track of the lights that 
+/// are on and the lights that are off. This should be easy enough
+/// with a vector of vectors.
+/// 
+/// #### Rust Implementation Details
+/// Construct a grid of Vec<Vec<bool>> where each grid point is a 
+/// boolean.
+/// true = on
+/// false = off
+/// 
+/// We iterate over each instruction, go through the range and switch
+/// on or off each light based on what the current instruction is.
+/// This does make the time complexity as O(n^3). I might sit down
+/// and figure out a cleverer way, but for now, this will suffice.
+
 use crate::Instruction;
 
 pub fn solve(data: &Vec<Instruction>) {

@@ -1,3 +1,11 @@
+/// ### Solution for Part 1
+/// This requires us to sum all the numbers in the document,
+/// thus we can just read all the numbers and then sum them.
+/// 
+/// #### Rust Implementation Details
+/// We read the json text, and extract via regex all the numbers 
+/// that occurs in it. 
+
 use regex::Regex;
 
 pub fn solve(input: &str) {

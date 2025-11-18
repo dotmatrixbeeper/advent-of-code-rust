@@ -1,3 +1,20 @@
+/// ### Solution for Part 2
+/// Same as part 1 with the exception of wire b being supplied
+/// with the value in wire b from part 1.
+/// 
+/// #### Rust Implementation Details
+/// We maintain a map for the wire values.
+/// We create a Instruction graph:
+///     - Instructions are operations with two operands and
+///         one operator.
+///     - If an instruction does not have an operator we make
+///         it the assignment operator
+/// The `resolve_wire` function is a recursive function that 
+/// returns value for a wire given to it.
+/// When it finds a dead end, it returns an Error
+/// Else it returns an Ok(value) where value is the value of 
+/// the wire.
+
 use std::collections::HashMap;
 use regex::Regex;
 
@@ -80,7 +97,7 @@ pub fn solve() {
     }
 
     if let Ok(val) = resolve_wire("a", &mut wire_map, &instruction_map) {
-        println!("Value on a: {val}")
+        println!("Signal on wire a: {val}")
     }
 }
 
