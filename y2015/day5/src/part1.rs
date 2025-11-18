@@ -1,3 +1,16 @@
+/// ### Solution for Part 1
+/// This is a filter problem. With the given input file, and the criterias
+/// we need to find the valid line count. 
+/// 
+/// #### Rust Implementation Details
+/// The filtering is easy enough with iterator filters:
+/// 1. At least three vowels: for each like filter the vowes and count
+/// 2. At least one repeating character: zip the chars in a line with chars 
+///     of the same line from the second position onwards. Then check tuples
+///     for equality
+/// 3. Does not contain given strings: line.contains(string) will give us the
+///     continer check
+
 const VOWELS: [char; 5] = ['a', 'e', 'i', 'o', 'u'];
 
 pub fn solve(inputs: &Vec<&str>) {

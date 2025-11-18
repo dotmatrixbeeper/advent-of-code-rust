@@ -1,3 +1,23 @@
+/// ### Solution for Part 1
+/// The problem asks you to construct a grid of wires and nodes 
+/// that the wire connects to. There's a bunch of start wires 
+/// that we can start with. We can track the wires and their
+/// values. If we reach a node that has its inputs unresolved 
+/// we can return and go for the next wire that's available.
+/// 
+/// #### Rust Implementation Details
+/// We maintain a map for the wire values.
+/// We create a Instruction graph:
+///     - Instructions are operations with two operands and
+///         one operator.
+///     - If an instruction does not have an operator we make
+///         it the assignment operator
+/// The `resolve_wire` function is a recursive function that 
+/// returns value for a wire given to it.
+/// When it finds a dead end, it returns an Error
+/// Else it returns an Ok(value) where value is the value of 
+/// the wire.
+
 use std::collections::HashMap;
 use regex::Regex;
 

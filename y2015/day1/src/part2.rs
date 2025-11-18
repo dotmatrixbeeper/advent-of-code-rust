@@ -1,4 +1,5 @@
 /// ### Solution for Part 2
+/// 
 /// We imagine ground level to be level 0. This is the current level
 /// We look at each symbol in the input and repeat the following
 /// + If symbol is `(`
@@ -19,6 +20,7 @@
 /// We map each character and match against `(` to add 1 sum and add -1 otherwise. 
 /// 
 /// At the point where sum becomes -1 is where we reach basement. We print the position and finish.
+
 pub fn solve(data: &str) {
     let mut sum: i32 = 0;
     for (i, c) in data.chars().enumerate() {

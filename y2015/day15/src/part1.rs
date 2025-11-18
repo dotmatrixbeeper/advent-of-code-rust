@@ -1,3 +1,12 @@
+/// ### Solution for Part 1
+/// This is a optimization problem that requires finding the max score
+/// of the ingridient mix.
+/// 
+/// #### Rust Implementation Details
+/// We use a BFS solution with pruning for visited nodes.
+/// And then we try to go through all the combination of ingredients
+/// We find the max result after going through all the combinations
+
 use std::collections::HashSet;
 
 use crate::Ingredient;

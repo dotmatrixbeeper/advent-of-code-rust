@@ -1,3 +1,12 @@
+/// ### Solution for Part 1
+/// We have two reindeers racing and need to find who is ahead at the 
+/// 2503 second.
+/// 
+/// #### Rust Implementation Details
+/// We can mathematically calculate the distances travelled by each 
+/// reindeer using given speed and rest durations. Then we compare 
+/// the results and declare the winner.
+
 use crate::Reindeer;
 
 pub fn solve(reindeers: &Vec<Reindeer>) {

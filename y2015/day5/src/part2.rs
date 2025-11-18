@@ -1,3 +1,15 @@
+/// ### Solution for Part 2
+/// The second part requires a little more complex matching. 
+/// We need to ensure that the repetation is not overlapping.
+/// 
+/// #### Rust Implementation Details
+/// This filtering would take place as follows:
+/// 1. Repeating pair: check the part of the string before current
+///     position and the part of the string after current position 
+///     for existance of current pair
+/// 2. Letter pair: check the current position with the letter at
+///     position +2
+
 pub fn solve(inputs: &Vec<&str>) {
     let nice_lines = inputs.iter()
         .filter(| line | validate(line))

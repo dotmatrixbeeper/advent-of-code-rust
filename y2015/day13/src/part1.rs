@@ -1,3 +1,13 @@
+/// ### Solution for Part 1
+/// This is a travelling salesperson problem again, but this time,
+/// we have to return to the source. 
+/// 
+/// #### Rust Implementation Details
+/// We use a similar implementation to day 9. We do have bi-directional
+/// graph this time, where the cost from A -> B is not the same as the 
+/// cost from B -> A. And we can have negative weights.
+/// So we start with node 0 and try to find the max cost possible.
+
 use std::{collections::HashMap, i32};
 
 use crate::Graph;
@@ -28,7 +38,6 @@ pub fn solve(graph: &Graph, vertex_map: &HashMap<usize, String>) {
                     let prev_subset = remove_from_subset(subset, last);
                     if let Some(&prev_cost) = dp.get(&(prev_subset, prev)) {
                         let cost = prev_cost.saturating_add(graph.distance(prev, last)).saturating_add(graph.distance(last, prev));
-                        // println!("cost: {cost}");
                         if cost > max_cost {
                             max_cost = cost;
                             best_prev = prev;

@@ -1,3 +1,11 @@
+/// ### Solution for Part 2
+/// In part 2, we need to award points for each second that a reindeer
+/// is in lead. And thus we need to track the duration period per second.
+/// 
+/// #### Rust Implementation Details
+/// We iterate from 1 to 2503 and after each tick we increment the point 
+/// to the leading reindeer.
+
 use std::collections::{HashMap, HashSet};
 
 use crate::Reindeer;

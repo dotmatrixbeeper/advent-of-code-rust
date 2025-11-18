@@ -1,3 +1,17 @@
+/// ### Solution for Part 2
+/// The second part of the problem has Santa and Robo-Santa taking orders
+/// alternatively. Thus we have to have two workers that independently take turns moving.
+/// So we need to track the houses being visited by both.
+/// 
+/// #### Rust Implementation Details
+/// The difference to the first part, is that we have two trackers now
+/// 'current_santa_house` and `current_robo_santa_house`. 
+/// We maintain a boolean `turn` flag:
+/// - if it is `true` update current_santa_house
+/// - if it is `false` update current_robo_santa_house
+/// Each turn we insert the house visited into the hashset
+/// At the end we count the number of elements in the set.
+
 use std::collections::HashSet;
 
 use crate::Directions;

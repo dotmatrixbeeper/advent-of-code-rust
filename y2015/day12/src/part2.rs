@@ -1,3 +1,11 @@
+/// ### Solution for Part 2
+/// In part two we need to care a little bit about the structure
+/// of the JSON. Thus we use serde, to read the JSON object.
+/// Then we filter out all the "red" objects and do the sum again.
+/// 
+/// #### Rust Implementation Details
+/// We iterate over the objects in the JSON recursively, avoiding 
+/// "red" containing objects and arrays and sum the numbers found.
 use serde_json::Value;
 
 pub fn solve(input: &str) {

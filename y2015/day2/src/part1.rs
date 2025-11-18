@@ -1,18 +1,22 @@
-/// ### Solution for Part 1
-/// 
+/// ### Solution for Part 1 
+/// Wrapping paper area equals surface area of the box being wrapped.
+/// Find surface area of all the boxes and add them up along with the 
+/// area of the smallest side.
 /// 
 /// #### Rust Implementation Details
-/// We create an iterator over the characters of the input string. 
-/// We map each character and match against `(` to return 1 and -1 otherwise. 
-/// Then we use the collecting function `sum` to add all the map returned 1s and -1s to arrive at the answer.
+/// iterate over the `Dimension` vector, where each `Dimension` holds 
+/// the length, breadth, and height.
+/// Calculate area of the sides.
+/// Find the min area among them.
+/// Accumulate with `.sum()`
 
 use std::cmp::min;
 
-use crate::Dimensions;
+use crate::Dimension;
 
-pub fn solve(data: Vec<Dimensions>) {
+pub fn solve(data: Vec<Dimension>) {
     let size: u32 = data.iter()
-        .map(| side: &Dimensions | {
+        .map(| side: &Dimension | {
             let areas: (u32, u32, u32) =  ((side.0 as u32 * side.1 as u32), (side.1 as u32 * side.2 as u32), (side.2 as u32 * side.0 as u32));
             return 2 * (areas.0 + areas.1 + areas.2) + min(areas.2, min(areas.0, areas.1));
         })
