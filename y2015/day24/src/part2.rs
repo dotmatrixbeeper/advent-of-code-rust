@@ -1,3 +1,10 @@
+/// ### Solution for Part 2
+/// The second asks the target to be sum/4 instead.
+/// 
+/// #### Rust Implementation Details
+/// The implementation remains the same while the 
+/// target_weight changes to sum / 4
+
 pub fn solve(weights: &Vec<u32>) {
     let target_weight = weights.iter().sum::<u32>() / 4;
 

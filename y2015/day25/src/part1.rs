@@ -1,3 +1,12 @@
+/// ### Solution for Part 1
+/// This is a simple problem of finding the code at 
+/// a given position with the given formula.
+/// 
+/// #### Rust Implementation Details
+/// We find the serial position for the asked coordinates.
+/// After that we just need to iterate from the last known 
+/// position to the target position while applying the formula.
+
 pub fn solve() {
     let mut element: u64 = 27995004;
     let start_position = find_position(6, 6) + 1;

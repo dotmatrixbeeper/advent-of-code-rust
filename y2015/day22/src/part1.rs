@@ -1,3 +1,33 @@
+/// ### Solution for Part 1
+/// This is a continuation of the RPG game from 21.
+/// However it is more complicated. In this we have 
+/// effects and spells of various kinds, costing mana.
+/// This problem asks us to find the lowest mana required 
+/// to defeat the boss.
+/// 
+/// #### Rust Implementation Details
+/// We model the problem with spells, user and boss. 
+/// User has its HP, mana, current armor, and active
+/// effects.
+/// Boss has HP and damage.
+/// 
+/// We start with the user's turn and create a simulation
+/// tree using all possible spells.
+/// Each node of the tree then has active effects applied 
+/// before the boss takes its turn to deal
+/// damage depending on the armor.
+/// Then the effects are applied again and the player takes 
+/// its turn. 
+/// The minimum mana spent is intially 0, and increases on 
+/// each use, being stored with the nodes.
+/// Each node generated gets stored into a state vector, which
+/// then pops the next node to continue the branch evaluation.
+/// Once we find a minimum mana when boss is defeated we use 
+/// it to prune further branches when the mana cost exceeds 
+/// this value. 
+/// Finally, we find the min mana after all the states have 
+/// been exhausted.
+
 #[derive(Clone, Debug)]
 struct Spell<'a> {
     name: &'a str,
@@ -89,7 +119,6 @@ pub fn solve() {
 
     while let Some(mut state) = min_heap.pop() {
         state_count += 1;
-        // println!("{:?}", state);
         let boss_dead = apply_effects(&mut state);
 
         if boss_dead && state.mana_spent < min_mana {

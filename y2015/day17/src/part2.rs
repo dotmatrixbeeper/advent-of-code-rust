@@ -1,9 +1,14 @@
-pub fn solve(container: &Vec<u32>, target: u32) {
-    let mut dp = vec![vec![0; target as usize + 1]; container.len() + 1];
+/// ### Solution for Part 2
+/// This is still the subset sum problem but this time we need 
+/// to also find the minimum number of containers that can hold
+/// the target sum.
+/// 
+/// #### Rust Implementation Details
+/// We first collect the possible subsets of a size and then find 
+/// for that size the number of subsets that make up the target.
+/// We don't need to use the DP method from the first solution.
 
-    for i in 0..=container.len() {
-        dp[i][0] = 1;
-    }
+pub fn solve(container: &Vec<u32>, target: u32) {
 
     let mut min_size = 0;
     let mut combinations = 0;

@@ -1,3 +1,14 @@
+/// ### Solution for Part 1
+/// This is a find a match problem, and I have chosen to go the easy
+/// way and just compare the given input to the search parameters.
+/// Once we have three matches, we return.
+/// 
+/// #### Rust Implementation Details
+/// We iter() over the list of Aunties and for each aunt find the number
+/// of matches.
+/// If the number of matches is three (since we only have three 
+/// parameters) we return the current Aunt.
+
 use crate::Aunt;
 
 pub fn solve(aunts: &Vec<Aunt>) {

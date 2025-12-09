@@ -1,3 +1,11 @@
+/// ### Solution for Part 2
+/// For this part, the value at register a 
+/// starts at 1.
+/// 
+/// #### Rust Implementation Details
+/// Rerun the same code with initial `a` value
+/// at 1.
+
 use crate::Instruction;
 
 pub fn solve(instructions: &Vec<Instruction>) {

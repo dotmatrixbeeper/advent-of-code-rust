@@ -1,3 +1,27 @@
+/// ### Solution for Part 2
+/// The second part of the problem asks us to find the 
+/// fastest way to make the molecule starting at `e`.
+/// We can run a reverse operation and find the steps
+/// from the target to come to `e`.
+/// 
+/// #### Rust Implementation Details
+/// We create a new map with the key being the RHS of
+/// the given transforms and the value being the LHS.
+/// 
+/// We then transform the whole molecule into it's 
+/// constituents and storing it in a vector.
+/// Then for each molecule we try to find the matching 
+/// transform, if we can't find it for that molecule, we 
+/// add the next molecule to it and then try again, and 
+/// continue until we have found a proper substitute.
+/// We know that the highest transform molecule key is 8
+/// characters long, so we only expand molecules until that
+/// size.
+/// Once we complete a whole pass over the molecule and 
+/// have transformed it into some reduced form, we take 
+/// this form as the input and continue applying the process
+/// until we find it converted into `e` transform molecules.
+
 use regex::Regex;
 
 use std::collections::HashMap;
