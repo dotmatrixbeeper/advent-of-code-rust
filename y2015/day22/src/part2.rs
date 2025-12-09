@@ -1,3 +1,13 @@
+/// ### Solution for Part 2
+/// The second part of the problem increases player
+/// diffculty by reducing HP by 1 at the start of the
+/// player turn.
+/// 
+/// #### Rust Implementation Details
+/// We use the same approach with a simple modification 
+/// to reduce player HP by 1 at the beginning of their 
+/// turn.
+
 #[derive(Clone, Debug)]
 struct Spell<'a> {
     name: &'a str,

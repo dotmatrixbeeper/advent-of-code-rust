@@ -1,3 +1,14 @@
+/// ### Solution for Part 1
+/// This is subset sum problem: find the number of subsets that 
+/// can sum upto the given target.
+/// 
+/// #### Rust Implementation Details
+/// We use a dynamic programming approach to add upto the target 
+/// sum. We start with target 0 which can be made in 1 way with 0
+/// containers. 
+/// We continue for each container and increments of weight
+/// until we reach target weight.
+
 pub fn solve(container: &Vec<u32>, target: u32) {
     let mut dp = vec![vec![0; target as usize + 1]; container.len() + 1];
 

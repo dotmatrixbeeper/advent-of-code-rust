@@ -1,3 +1,12 @@
+/// ### Solution for Part 2
+/// This part changes the conditions to have a limit
+/// of 50 houses per elf. Then it also makes gifts
+/// per elf to be 11.
+/// 
+/// #### Rust Implementation Details
+/// The changes in code consist of limiting the factors
+/// from exceeding their 50th product.
+
 pub fn solve() {
     let mut house_count = 0;
 

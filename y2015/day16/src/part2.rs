@@ -1,3 +1,14 @@
+/// ### Solution for Part 2
+/// The second part of this problem changes the original problem
+/// statement to say that for certain attributes the machine 
+/// detects range instead of a particular value.
+/// We change the matching algorithm to check for ranges instead.
+/// 
+/// #### Rust Implementation Details
+/// We iter() over the list of Aunties and for each aunt find the number
+/// of matches.
+/// If the number of matches is three (since we only have three 
+/// parameters) we return the current Aunt.
 use crate::Aunt;
 
 pub fn solve(aunts: &Vec<Aunt>) {

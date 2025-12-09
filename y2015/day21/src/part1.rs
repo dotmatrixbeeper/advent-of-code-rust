@@ -1,3 +1,14 @@
+/// ### Solution for Part 1
+/// We create a simple RPG simulator, with weapon and 
+/// armor values with some basic enhancers.
+/// We can brute force this to find the lowest cost.
+/// 
+/// #### Rust Implementation Details
+/// We use four loops with weapons, armors, first ring,
+/// second ring and then check for each combination if
+/// we win, and if we do, if the cost is lower than the 
+/// minimum cost.
+
 use std::i16;
 
 use crate::Item;

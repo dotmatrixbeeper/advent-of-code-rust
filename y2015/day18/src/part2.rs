@@ -1,3 +1,14 @@
+/// ### Solution for Part 2
+/// This changes the first part of the problem by saying that 
+/// the lights in four corners stay on. This is stragiht-forward
+/// to handle by putting in a condition to not change anything in 
+/// the corners.
+/// 
+/// #### Rust Implementation Details
+/// The solution remains same as the first part, except we add
+/// a small condition to check if we are currently looking at 
+/// the corners.
+
 const LOOKUP_OFFSETS: [(i32, i32); 8] = [(-1, -1), (-1, 0), (-1, 1),
                                         (0, -1), (0, 1),
                                         (1, -1), (1, 0), (1, 1)];

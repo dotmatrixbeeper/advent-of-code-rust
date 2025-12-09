@@ -1,3 +1,13 @@
+/// ### Solution for Part 1
+/// This is a straight forward problem of changing the state of 
+/// lights depending on the state of their neighbours.
+/// 
+/// #### Rust Implementation Details
+/// The algorithm takes each light in the 100x100 grid and based 
+/// on the rules changes the current light.
+/// The code for the algorithm needs to run 100 times. 
+/// Thus we need three loops for the solution.
+
 const LOOKUP_OFFSETS: [(i32, i32); 8] = [(-1, -1), (-1, 0), (-1, 1),
                                         (0, -1), (0, 1),
                                         (1, -1), (1, 0), (1, 1)];

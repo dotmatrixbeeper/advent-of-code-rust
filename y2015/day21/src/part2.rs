@@ -1,3 +1,11 @@
+/// ### Solution for Part 2
+/// The second part of the problem asks us to find the 
+/// max gold instead.
+/// 
+/// #### Rust Implementation Details
+/// The implementation remains the same except we change 
+/// the min finder to max finder.
+
 use crate::Item;
 
 pub fn solve(weapons: &Vec<Item>, armors: &Vec<Item>, rings: &Vec<Item>) {

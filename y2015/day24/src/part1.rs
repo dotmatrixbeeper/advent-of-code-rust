@@ -1,3 +1,16 @@
+/// ### Solution for Part 1
+/// This problem requires finding the smallest subset
+/// that can sum upto sum / 3 exactly. This can be 
+/// solved by backtracking since we need to find 
+/// all the combinations, which can be variable in length.
+/// 
+/// #### Rust Implementation Details
+/// We find the subsets that can make the sum first, using
+/// a recursive backtracking method.
+/// Then we find the minimum size out of the combinations
+/// Then we find the combination with the lowest 'quantum 
+/// entanglement'
+
 pub fn solve(weights: &Vec<u32>) {
     let target_weight = weights.iter().sum::<u32>() / 3;
 

@@ -1,3 +1,18 @@
+/// ### Solution for Part 1
+/// This is a simple emulator problem.
+/// We read the instructions and execute them.
+/// 
+/// #### Rust Implementation Details
+/// We store the instructions in a vector, since
+/// we have jump instructions in the given input.
+/// We can use the order of the vector to jump to
+/// locations conditionally.
+/// while the next instruction exists
+/// we evaluate the instruction and update
+/// the registers if requried.
+/// else we are done and we can print the value 
+/// in register b.
+
 use crate::Instruction;
 
 pub fn solve(instructions: &Vec<Instruction>) {
