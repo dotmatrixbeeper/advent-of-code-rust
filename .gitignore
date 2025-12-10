@@ -20,3 +20,4 @@ Cargo.lock
 .vscode
 
 aoc.code-workspace
+inputs/**/*.txt
