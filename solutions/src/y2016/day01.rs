@@ -73,12 +73,12 @@ impl Coordinate {
 pub fn run(input: &str) {
     println!("======= DAY 1 =======");
     let data = input.split(", ").collect::<Vec<&str>>();
-    part1(&data);
-    part2(&data);
+    part_1(&data);
+    part_2(&data);
     println!("=====================\n");
 }
 
-fn part1(data: &Vec<&str>) {
+fn part_1(data: &Vec<&str>) {
     println!("Part 1 --------------");
     let mut coordinate = Coordinate::new();
     for instruction in data {
@@ -107,7 +107,7 @@ fn part1(data: &Vec<&str>) {
 /// implementation to record these points in a set. 
 /// before adding to the set we check if it exists in the set, and if so we 
 /// output that and exit.
-fn part2(data: &Vec<&str>) {
+fn part_2(data: &Vec<&str>) {
     println!("Part 2 --------------");
 
     let mut coordinate = Coordinate::new();
