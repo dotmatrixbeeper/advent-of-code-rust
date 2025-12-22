@@ -1,6 +1,6 @@
 use std::{env, path::PathBuf};
 
-const YEARS_DAYS: [(u16, (u16, u16)); 2] = [(2015, (1, 25)), (2016, (1, 1))];
+const YEARS_DAYS: [(u16, (u16, u16)); 2] = [(2015, (1, 25)), (2016, (1, 4))];
 
 fn main() {
     let args = env::args().collect::<Vec<String>>();
@@ -56,6 +56,7 @@ fn run_specific_day(year: u16, day: u16) {
         (2016, 1) => solutions::y2016::day01::run(&input),
         (2016, 2) => solutions::y2016::day02::run(&input),
         (2016, 3) => solutions::y2016::day03::run(&input),
+        (2016, 4) => solutions::y2016::day04::run(&input),
         _ => {
             eprintln!("No solution avaliable for {}/{}", year, day);
             std::process::exit(1);
