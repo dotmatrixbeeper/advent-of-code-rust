@@ -39,7 +39,7 @@ fn part_1(data: &Vec<&str>) {
         })
         .collect::<String>();
     println!("Code for the door: {}", code);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 fn use_keypad((x, y): (i8, i8), start_pos: &mut (i8, i8)) {
@@ -72,7 +72,7 @@ fn part_2(data: &Vec<&str>) {
         })
         .collect::<String>();
     println!("Code for the door: {}", code);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 fn use_new_keypad((x, y): (i8, i8), start_pos: &mut (i8, i8)) {

@@ -27,7 +27,7 @@ fn part_1(data: &Vec<&str>) {
         })
         .count();
     println!("Only {} triangles are possible.", triangle_count);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 fn is_triangle(sides: &mut Vec<u32>) -> Option<()> {
@@ -64,5 +64,5 @@ fn part_2(data: &Vec<&str>) {
         })
         .count();
     println!("Only {} triangles are possible.", triangle_count);
-    println!("---------------------")
+    println!("---------------------");
 }

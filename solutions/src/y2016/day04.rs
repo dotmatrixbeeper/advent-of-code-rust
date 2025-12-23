@@ -25,7 +25,7 @@ fn part_1(input: &str) {
         })
         .sum::<u32>();
     println!("The sum of IDs: {}", sum_of_ids);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 fn get_checksum(name: &str) -> String {
@@ -80,7 +80,7 @@ fn part_2(input: &str) {
         .next()
         .unwrap();
     println!("Id of room with North Pole objects: {}", id);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 fn is_north(name: &str, id: &u32) -> bool {

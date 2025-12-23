@@ -99,7 +99,7 @@ fn part_1(data: &Vec<&str>) {
     // and calling abs() on it
     let distance_to_hq = (0 - coordinate.point.x).abs() + (0 - coordinate.point.y).abs();
     println!("Distance to HQ is: {} blocks", distance_to_hq);
-    println!("---------------------")
+    println!("---------------------");
 }
 
 /// in the second part we need to find the first location that's revisited.
@@ -134,5 +134,5 @@ fn part_2(data: &Vec<&str>) {
             }
         } 
     }
-    println!("---------------------")
+    println!("---------------------");
 }
