@@ -3,7 +3,7 @@ use std::thread;
 use std::thread::JoinHandle;
 
 pub fn run(input: &str) {
-    println!("======= DAY 4 =======");
+    println!("======= DAY 5 =======");
     part_1(input);
     part_2(input);
     println!("=====================\n");
