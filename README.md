@@ -2,7 +2,7 @@
 Here lies the code to solve Advent of Code for all years till date. 
 Currently completed:
 - [x] 2015
-- [ ] 2016 ![Progress](https://img.shields.io/badge/progress-28%72-blue)
+- [ ] 2016 ![Progress](https://img.shields.io/badge/progress-7/25-blue)
 - [ ] 2017
 - [ ] 2018
 - [ ] 2019
