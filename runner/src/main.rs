@@ -60,6 +60,7 @@ fn run_specific_day(year: u16, day: u16) {
         (2016, 5) => solutions::y2016::day05::run(&input),
         (2016, 6) => solutions::y2016::day06::run(&input),
         (2016, 7) => solutions::y2016::day07::run(&input),
+        (2016, 8) => solutions::y2016::day08::run(&input),
         _ => {
             eprintln!("No solution avaliable for {}/{}", year, day);
             std::process::exit(1);
