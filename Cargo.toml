@@ -12,3 +12,4 @@ opt-level = 0
 [profile.release]
 lto = true                  # link-time optimization
 codegen-units = 1           # better optimization, slower compile for release profile
+strip = true

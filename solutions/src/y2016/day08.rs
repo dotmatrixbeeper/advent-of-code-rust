@@ -1,7 +1,7 @@
 use std::fmt::Display;
 
 pub fn run(input: &str) {
-    println!("======= DAY 7 =======");
+    println!("======= DAY 8 =======");
     part_1(input);
     part_2(input);
     println!("=====================\n");
