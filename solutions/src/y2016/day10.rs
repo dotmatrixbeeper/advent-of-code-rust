@@ -4,7 +4,6 @@ use std::io;
 pub fn run(input: &str) {
     println!("======= DAY 10 =======");
     let mut readline = String::new();
-    println!("Part 1 --------------");
     println!("Enter chips to watch out for:");
     println!("CHIP 1:");
     io::stdin().read_line(&mut readline).expect("Failed to read anything.");
@@ -13,10 +12,10 @@ pub fn run(input: &str) {
     println!("CHIP 2:");
     io::stdin().read_line(&mut readline).expect("Failed to read anything.");
     let chip_2 = readline.trim().parse::<u8>().unwrap();
-let mut output = HashMap::new();
+    let mut output = HashMap::new();
     part_1(input, &mut output, chip_1, chip_2);
     part_2(&output);
-    println!("=====================\n");
+    println!("======================\n");
 }
 
 struct Robot {
@@ -41,7 +40,7 @@ impl Robot {
 }
 
 fn part_1(input: &str, output_boxes: &mut HashMap<u8, Vec<u8>>, chip_1: u8, chip_2: u8) {
-
+    println!("Part 1 --------------");
     let (instructions, mut value_map, mut execution_stack) = get_translated_input(input);
     // while stack has values keep executing
     // if value in bot is equal to chips then break and print bot number
