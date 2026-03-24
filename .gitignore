@@ -18,6 +18,7 @@ target/
 
 Cargo.lock
 .vscode
+.zed
 
 aoc.code-workspace
 inputs/**/*.txt
