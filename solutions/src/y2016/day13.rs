@@ -26,7 +26,7 @@ fn part_1(seed: u32) {
     while let Some((x, y, steps)) = queue.pop_front() {
         if (x, y) == TARGET {
             println!("Steps to target: {}", steps);
-            // retrace_steps(seed, came_from);
+            retrace_steps(seed, came_from);
             break;
         }
 
